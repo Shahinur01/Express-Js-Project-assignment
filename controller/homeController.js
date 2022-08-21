@@ -1,10 +1,14 @@
 const path=require('path')
 
 
-exports.homeController=(req, res)=>{
-    res.sendFile(path.join(__dirname, '../views/index.html'))
+const homeController=(req, res)=>{
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 }
 
-exports.searchController=(req,res) => {
-    res.sendFile(path.join(__dirname,'../views/search.html'))
+const searchController=(req,res) => {
+    res.sendFile(path.join(__dirname,'../public/search.html'))
+    }
+
+    module.exports={
+        homeController, searchController
     }
